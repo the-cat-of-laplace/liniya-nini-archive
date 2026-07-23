@@ -751,6 +751,10 @@ blockquote cite {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.character-list > .character-primary {
+  grid-column: 1 / -1;
+}
+
 .relation-list > div {
   align-items: flex-start;
   background: var(--surface);
@@ -2114,6 +2118,12 @@ footer a {
   text-decoration: underline;
 }
 
+.section-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
 .character-feature {
   background: var(--surface-soft);
   border-top: 3px solid var(--cherry);
@@ -2164,6 +2174,11 @@ footer a {
   overflow-wrap: anywhere;
 }
 
+.credit-row > .credit-source {
+  color: var(--ink);
+  min-width: 0;
+}
+
 .credit-row a {
   color: var(--cherry-strong);
   font-size: 12px;
@@ -2194,7 +2209,7 @@ footer a {
     grid-template-columns: minmax(130px, .38fr) minmax(0, 1fr);
   }
 
-  .credit-row a {
+  .credit-row > .credit-source {
     grid-column: 2;
   }
 }
@@ -2222,6 +2237,10 @@ footer a {
   }
 
   .credit-row a {
+    grid-column: auto;
+  }
+
+  .credit-row > .credit-source {
     grid-column: auto;
   }
 
