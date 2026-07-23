@@ -124,6 +124,11 @@ function activateToc(targetId) {
   tocLinks.forEach((link) => {
     const isActive = link.getAttribute('href') === `#${targetId}`;
     link.classList.toggle('active', isActive);
+    if (isActive) {
+      link.setAttribute('aria-current', 'location');
+    } else {
+      link.removeAttribute('aria-current');
+    }
     if (isActive) activeLink = link;
   });
 
@@ -236,7 +241,10 @@ function renderDrafts() {
     removeButton.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 11v5M14 11v5"></path></svg>';
     removeButton.addEventListener('click', () => {
       const nextDrafts = loadDrafts().filter((entry) => entry.id !== draft.id);
-      writeStorage(draftsKey, nextDrafts);
+      if (!writeStorage(draftsKey, nextDrafts)) {
+        showToast('无法删除当前浏览器中的草稿');
+        return;
+      }
       renderDrafts();
       runSearch();
       showToast('草稿已删除');
@@ -295,7 +303,10 @@ exportDraftsButton.addEventListener('click', () => {
 
 clearDraftsButton.addEventListener('click', () => {
   if (!window.confirm('确定清空全部本地草稿吗？')) return;
-  writeStorage(draftsKey, []);
+  if (!writeStorage(draftsKey, [])) {
+    showToast('无法清空当前浏览器中的草稿');
+    return;
+  }
   renderDrafts();
   runSearch();
   showToast('本地草稿已清空');
