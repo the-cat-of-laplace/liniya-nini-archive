@@ -1,4 +1,6 @@
 const searchInput = document.querySelector('#entry-search');
+const clearSearchButton = document.querySelector('#clear-search');
+const searchStatus = document.querySelector('#search-status');
 const sections = [...document.querySelectorAll('[data-search-section]')];
 const noResults = document.querySelector('#no-results');
 const themeToggle = document.querySelector('#theme-toggle');
@@ -52,9 +54,24 @@ function runSearch() {
   });
 
   noResults.hidden = matches > 0;
+  if (clearSearchButton) clearSearchButton.hidden = !searchInput.value;
+  if (searchStatus) {
+    searchStatus.hidden = !query;
+    searchStatus.textContent = query ? (matches ? matches + ' 个匹配章节' : '没有匹配章节') : '';
+  }
+  updateActiveToc();
+  scheduleReadingUpdate();
 }
 
 searchInput.addEventListener('input', runSearch);
+
+function clearSearch({ focus = true } = {}) {
+  searchInput.value = '';
+  runSearch();
+  if (focus) searchInput.focus({ preventScroll: true });
+}
+
+if (clearSearchButton) clearSearchButton.addEventListener('click', () => clearSearch());
 
 document.addEventListener('keydown', (event) => {
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
@@ -63,11 +80,48 @@ document.addEventListener('keydown', (event) => {
   }
 
   if (event.key === 'Escape' && document.activeElement === searchInput) {
-    searchInput.value = '';
-    searchInput.blur();
-    runSearch();
+    clearSearch();
   }
 });
+
+function targetFromHash(hash = window.location.hash) {
+  try {
+    const id = decodeURIComponent(hash.slice(1));
+    return id ? document.getElementById(id) : null;
+  } catch {
+    return null;
+  }
+}
+
+function revealTarget(target) {
+  const section = target.closest('[data-search-section]');
+  if (section && section.classList.contains('search-hidden')) clearSearch({ focus: false });
+  return section;
+}
+
+document.addEventListener('click', (event) => {
+  if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  const link = event.target.closest('a[href^="#"]');
+  if (!link || link.target === '_blank') return;
+  const target = targetFromHash(link.getAttribute('href'));
+  if (target) revealTarget(target);
+});
+
+function navigateToHash() {
+  const target = targetFromHash();
+  if (!target) {
+    scheduleReadingUpdate();
+    return;
+  }
+  const section = revealTarget(target);
+  requestAnimationFrame(() => {
+    target.scrollIntoView({ block: 'start' });
+    if (section) activateToc(section.id);
+    scheduleReadingUpdate();
+  });
+}
+
+window.addEventListener('hashchange', navigateToHash);
 
 let toastTimer;
 function showToast(message) {
@@ -105,9 +159,11 @@ copyButton.addEventListener('click', async () => {
 });
 
 function activateToc(targetId) {
+  const previousLink = tocLinks.find((link) => link.classList.contains('active'));
   let activeLink = null;
   tocLinks.forEach((link) => {
-    const isActive = link.getAttribute('href') === '#' + targetId;
+    const target = targetFromHash(link.getAttribute('href'));
+    const isActive = link.getAttribute('href') === '#' + targetId && target && !target.classList.contains('search-hidden');
     link.classList.toggle('active', isActive);
     if (isActive) {
       link.setAttribute('aria-current', 'location');
@@ -117,17 +173,22 @@ function activateToc(targetId) {
     }
   });
 
-  if (activeLink && window.matchMedia('(max-width: 760px)').matches) {
-    activeLink.scrollIntoView({ block: 'nearest', inline: 'center' });
+  if (activeLink && activeLink !== previousLink && window.matchMedia('(max-width: 760px)').matches) {
+    const toc = activeLink.closest('.toc');
+    const offset = activeLink.getBoundingClientRect().left - toc.getBoundingClientRect().left;
+    toc.scrollLeft += offset - (toc.clientWidth - activeLink.offsetWidth) / 2;
   }
 }
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  const visible = entries
-    .filter((entry) => entry.isIntersecting && !entry.target.classList.contains('search-hidden'))
-    .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+function updateActiveToc() {
+  const visibleSections = sections.filter((section) => !section.classList.contains('search-hidden'));
+  const marker = Math.max(112, window.innerHeight * 0.16);
+  const currentSection = [...visibleSections].reverse().find((section) => section.getBoundingClientRect().top <= marker) || visibleSections[0];
+  activateToc(currentSection ? currentSection.id : null);
+}
 
-  if (visible) activateToc(visible.target.id);
+const sectionObserver = new IntersectionObserver(() => {
+  updateActiveToc();
 }, { rootMargin: '-16% 0px -72% 0px', threshold: 0 });
 
 sections.forEach((section) => sectionObserver.observe(section));
@@ -138,24 +199,23 @@ function updateProgress() {
   const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
   progressBar.style.transform = 'scaleX(' + Math.min(1, Math.max(0, progress)) + ')';
   progressQueued = false;
+  updateActiveToc();
 }
 
-document.addEventListener('scroll', () => {
+function scheduleReadingUpdate() {
   if (progressQueued) return;
   progressQueued = true;
   requestAnimationFrame(updateProgress);
-}, { passive: true });
+}
+
+document.addEventListener('scroll', scheduleReadingUpdate, { passive: true });
+window.addEventListener('resize', scheduleReadingUpdate);
+
+if (typeof ResizeObserver !== 'undefined') {
+  const layoutObserver = new ResizeObserver(scheduleReadingUpdate);
+  layoutObserver.observe(document.body);
+}
 
 updateProgress();
 
-window.addEventListener('load', () => {
-  const targetId = decodeURIComponent(window.location.hash.slice(1));
-  if (!targetId) return;
-  const target = document.getElementById(targetId);
-  if (!target) return;
-  window.setTimeout(() => {
-    target.scrollIntoView({ block: 'start' });
-    activateToc(targetId);
-    updateProgress();
-  }, 80);
-});
+window.addEventListener('load', navigateToHash);

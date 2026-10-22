@@ -10,6 +10,7 @@
   --cherry: #963448;
   --cherry-strong: #742438;
   --cherry-soft: #f2e3e6;
+  --on-cherry: #ffffff;
   --teal: #417972;
   --gold: #76551f;
   --positive: #2f7356;
@@ -50,6 +51,7 @@ body.dark {
   --cherry: #dc6c82;
   --cherry-strong: #ee8ba0;
   --cherry-soft: #482d34;
+  --on-cherry: var(--page);
   --teal: #77aaa4;
   --gold: #d1ad6a;
   --positive: #80bea0;
@@ -195,6 +197,38 @@ svg {
   color: var(--muted);
 }
 
+#clear-search {
+  background: transparent;
+  border: 0;
+  color: var(--muted);
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-size: 20px;
+  height: 36px;
+  padding: 0;
+  width: 36px;
+}
+
+#clear-search:hover {
+  color: var(--cherry);
+}
+
+#clear-search:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+}
+
+#search-status {
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .icon-button,
 .primary-button,
 .secondary-button {
@@ -221,7 +255,7 @@ svg {
 
 .primary-button {
   background: var(--cherry);
-  color: #fff;
+  color: var(--on-cherry);
 }
 
 .secondary-button {
@@ -1328,6 +1362,13 @@ blockquote cite {
   text-align: right;
 }
 
+.infobox .snapshot-caption {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 0;
+  padding: 0 19px 8px;
+}
+
 .confidence {
   background: var(--line);
   display: inline-block;
@@ -1603,9 +1644,14 @@ footer a {
   }
 
   .portrait-wrap {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
     height: 100%;
     min-height: 250px;
+  }
+
+  .infobox .snapshot-caption,
+  .infobox-link {
+    grid-column: 2;
   }
 
   .entry-content {
@@ -1656,6 +1702,10 @@ footer a {
     opacity: 1;
     padding-left: 9px;
     width: 100%;
+  }
+
+  .search-control:not(:focus-within) #clear-search {
+    display: none;
   }
 
   .header-tools > .primary-button {
@@ -1779,7 +1829,7 @@ footer a {
   }
 
   .portrait-wrap {
-    grid-row: 1 / span 3;
+    grid-row: 1 / span 4;
     height: 100%;
     min-height: 235px;
   }
@@ -1819,6 +1869,11 @@ footer a {
 
   .infobox-link {
     padding: 8px 14px 12px;
+  }
+
+  .infobox .snapshot-caption {
+    padding-left: 14px;
+    padding-right: 14px;
   }
 
   .entry-content {

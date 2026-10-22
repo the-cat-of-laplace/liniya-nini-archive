@@ -28,3 +28,11 @@
 - assets/archive/site-hero-preserved.png：项目早期页面截图原文件，作为历史素材保留
 
 图片版权归原作者及相关创作者所有。本项目为非官方整理，不代表栗妮亚_nini本人或哔哩哔哩。
+
+## 维护与检查
+
+页面维护日期与资料记录日期分开标注；账号及合集统计仍为2026年7月22日的历史快照，不代表实时数字。
+
+维护前运行 `node check-site.mjs`（Node.js 20+，无需安装依赖）。GitHub Actions 会在提交和拉取请求时自动检查本地资源、锚点、目录、图片说明、日期与脚本语法；外部来源需另行人工核实。
+
+详细流程见 [MAINTENANCE.md](MAINTENANCE.md)，实际变化见 [CHANGELOG.md](CHANGELOG.md)。
