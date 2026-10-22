@@ -1,0 +1,137 @@
+{
+  "recorded_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "account": {
+    "uid": "3537105286334825",
+    "name": "栗妮亚_nini",
+    "space_page": "https://space.bilibili.com/3537105286334825/upload/video",
+    "space_display": {
+      "posts": 926,
+      "videos": 198,
+      "articles": 728,
+      "audio": 0,
+      "plays_display": "86.4万"
+    },
+    "followers": 30579,
+    "likes": 122414,
+    "card_source": "https://api.bilibili.com/x/web-interface/card?mid=3537105286334825",
+    "scope_note": "主页展示投稿数与接口archive_count口径不同；本条目采用空间网页口径。回放系列数量单独统计，不与投稿数相加。"
+  },
+  "collections": {
+    "大栗兔的翻唱": 62,
+    "无后期瞎唱": 11,
+    "若只小兔": 4,
+    "了解兔子的话请点这栗": 5,
+    "大栗兔的模型展示": 10,
+    "兔兔切片": 10,
+    "直播回放": 1159
+  },
+  "series_source": "https://api.bilibili.com/x/series/archives?mid=3537105286334825&series_id=3814212&only_normal=true&sort=desc&pn=1&ps=30",
+  "early_archive": {
+    "uid": "3546381977389256",
+    "collection": "2023年度直播回放",
+    "count": 104,
+    "source": "https://space.bilibili.com/3546381977389256/lists/3659994?type=season"
+  },
+  "recent_works": [
+    {
+      "type": "中文填词演唱",
+      "title": "《诀别书》合作演唱",
+      "published_date": "2026-07-30",
+      "url": "https://www.bilibili.com/video/BV1Ja3x6qE58/",
+      "publisher_note": "原发布账号为时光罅隙间，栗妮亚以演唱身份合作"
+    },
+    {
+      "type": "翻唱",
+      "title": "《黑凤梨》",
+      "published_date": "2026-08-05",
+      "url": "https://www.bilibili.com/video/BV1itMy63ETG/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "合作翻唱",
+      "title": "与库洛洛_Kuroro合唱《听说我喜欢你》",
+      "published_date": "2026-08-19",
+      "url": "https://www.bilibili.com/video/BV1nx8E6AEy3/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《历历万乡》（＋4 key）",
+      "published_date": "2026-08-31",
+      "url": "https://www.bilibili.com/video/BV1Met86zEH5/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《天灵灵地灵灵》",
+      "published_date": "2026-09-16",
+      "url": "https://www.bilibili.com/video/BV1DMew65EnU/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《月出》",
+      "published_date": "2026-09-19",
+      "url": "https://www.bilibili.com/video/BV1qyeb6vE63/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《花骨朵》",
+      "published_date": "2026-09-21",
+      "url": "https://www.bilibili.com/video/BV1HKhq6XEWv/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《歌》",
+      "published_date": "2026-10-09",
+      "url": "https://www.bilibili.com/video/BV1wBp46rEQd/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    },
+    {
+      "type": "翻唱",
+      "title": "《蝴蝶》",
+      "published_date": "2026-10-10",
+      "url": "https://www.bilibili.com/video/BV1RPp36UEB9/",
+      "publisher_note": "栗妮亚_nini本人账号"
+    }
+  ],
+  "live_records": [
+    {
+      "title": "To the moon",
+      "stream_date": "2026-09-03",
+      "published_at": "2026-09-04T00:37:03+08:00",
+      "url": "https://www.bilibili.com/video/BV1vetf6wEnm/",
+      "duration_seconds": 11060
+    },
+    {
+      "title": "小兔新衣！周年庆！",
+      "stream_date": "2026-09-13",
+      "published_at": "2026-09-14T03:25:38+08:00",
+      "url": "https://www.bilibili.com/video/BV1jaYq6QE1L/",
+      "duration_seconds": 10600,
+      "note": "标题记录场次；未列正式衣装名或制作署名。"
+    },
+    {
+      "title": "祝我生日快乐！",
+      "stream_date": "2026-10-21",
+      "published_at": "2026-10-22T01:22:36+08:00",
+      "url": "https://www.bilibili.com/video/BV1qonz6FE8C/",
+      "duration_seconds": 17441
+    }
+  ],
+  "images": [
+    {
+      "file": "assets/updates/2026-09-anniversary.jpg",
+      "source": "https://i1.hdslb.com/bfs/archive/246ddc45fad8a5aba43806287a6c987c9d617f03.jpg",
+      "video": "https://www.bilibili.com/video/BV1jaYq6QE1L/"
+    },
+    {
+      "file": "assets/updates/2026-10-butterfly.jpg",
+      "source": "https://i0.hdslb.com/bfs/archive/302942d57816aa96b6d0d36e2c81884f17cc31c4.jpg",
+      "video": "https://www.bilibili.com/video/BV1RPp36UEB9/"
+    }
+  ]
+}
