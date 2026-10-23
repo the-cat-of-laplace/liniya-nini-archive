@@ -43,7 +43,7 @@
       "page_edited_at": "2024-10-26T12:01:00+08:00",
       "reserved_event_at": "2024-10-21T20:00:00+08:00",
       "event_theme": "梦境·回溯",
-      "scope_note": "可确认生日新衣活动预约，正文未给白兔称呼，不据此给白兔补定首次登场日期。"
+      "scope_note": "已追加原生日回模型画面、海报与白兔故事片段比对，交叉确认该场为白兔白芭蕾新衣活动，详见2026-10-23-white-rabbit.json。"
     }
   ],
   "video_date_review": [
@@ -51,7 +51,7 @@
     {"bvid": "BV13m411m7js", "published_date": "2024-04-27", "meaning": "新衣预告投稿日"},
     {"bvid": "BV1PS411c7AU", "published_date": "2024-05-08", "meaning": "新衣回剧情片段投稿日，混用插图与旧模型"},
     {"bvid": "BV1njBqY3E54", "published_date": "2024-11-22", "meaning": "红黑衣装Live2D模型展示投稿日"},
-    {"bvid": "BV1adQpYsEyQ", "published_date": "2025-03-12", "meaning": "白兔旧生日故事录像上传日，原生日场次待核实"},
+    {"bvid": "BV1adQpYsEyQ", "published_date": "2025-03-12", "meaning": "白兔故事片段另行上传日；已比对为2024-10-21生日场内容"},
     {"bvid": "BV1ytgUz9EsW", "published_date": "2025-07-01", "meaning": "弥赛亚角色故事投稿日"},
     {"bvid": "BV1JCZ7BFEkT", "published_date": "2026-02-14", "meaning": "本节收录的3D视频投稿日，不推为首次3D实装日"},
     {"bvid": "BV12dZaB7EJF", "published_date": "2026-02-19", "meaning": "本节收录的MMD视频投稿日"},
@@ -64,7 +64,7 @@
       {"url": "https://www.bilibili.com/video/BV1njBqY3E54/?t=40", "supports": "对应Live2D细节；11月为展示投稿日"},
       {"url": "https://www.bilibili.com/video/BV1JCZ7BFEkT/?t=10", "supports": "相关红黑玫瑰造型的3D呈现"}
     ],
-    "white_rabbit_note": "旧生日故事以Q版/兔玩偶画面叙事，不能用其上传日推断白色Live2D衣装的发布日期。"
+    "white_rabbit_note": "旧故事的Q版/兔玩偶画面与2024-10-21原生日回逐段一致；该场后续展示白色Live2D新衣，已据原回放与公告交叉确认衣装活动日期。"
   },
   "credit_review": {
     "early_live2d": "与模型展示简介一致：画师大大大大大柚子_，建模canaette，视频金色工贼。",
