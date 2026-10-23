@@ -1,0 +1,57 @@
+{
+  "recorded_date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "subject": "2026年三周年新衣",
+  "account_uid": "3537105286334825",
+  "article_anchor": "outfit-anniversary-2026",
+  "naming": {
+    "editorial_label": "三周年新衣",
+    "creator_promotional_name": "小师妹",
+    "formal_outfit_name": null,
+    "note": "小师妹为本人邀约中使用的宣传称呼，未将其直接等同正式衣装名。"
+  },
+  "invitation": {
+    "title": "小兔的三周年新衣邀约",
+    "url": "https://www.bilibili.com/opus/1246392950946004994",
+    "page_edited_at": "2026-09-10T18:43:00+08:00",
+    "event_at": "2026-09-13T20:00:00+08:00",
+    "verification": "本人空间新衣搜索结果及动态详情页可读正文，页面显示编辑时间。",
+    "summary": "以小师妹收到三年前来信、带着月饼等物品下山赴约的叙事邀请观众参加三周年新衣庆会。"
+  },
+  "replay": {
+    "bvid": "BV1jaYq6QE1L",
+    "title": "【直播回放】小兔新衣！周年庆！ 2026年09月13日19点场",
+    "url": "https://www.bilibili.com/video/BV1jaYq6QE1L/",
+    "published_at": "2026-09-14T03:25:38+08:00",
+    "page": 1,
+    "cid": "41868657941",
+    "event_time_note": "邀约为20:00，回放原标题为19点场；分别保留，不将两者混写。",
+    "credit_note": "本次核对的邀约正文和回放简介未列新衣设计、原画或建模署名。"
+  },
+  "images": [
+    {
+      "file": "assets/outfits/anniversary-2026-fullbody.webp",
+      "caption": "黑发新衣全身",
+      "time_seconds": 2461,
+      "timecode": "00:41:01",
+      "source": "https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=2461"
+    },
+    {
+      "file": "assets/outfits/anniversary-2026-black-hair.webp",
+      "caption": "黑发红瞳近景",
+      "time_seconds": 3000,
+      "timecode": "00:50:00",
+      "source": "https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=3000"
+    },
+    {
+      "file": "assets/outfits/anniversary-2026-white-hair.webp",
+      "caption": "白发披外搭版本",
+      "time_seconds": 2890,
+      "timecode": "00:48:10",
+      "source": "https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=2890"
+    }
+  ],
+  "image_processing": "852×480完整原始视频帧，仅转换为WebP，保留背景、整帧和原水印，未生成或改绘形象。",
+  "rights": "画面版权归栗妮亚_nini及相关创作者所有，图片用于非官方资料整理并链接原始回放。",
+  "scope_note": "本次为衣装内容更新，账号与合集数字沿用2026-10-22快照。"
+}

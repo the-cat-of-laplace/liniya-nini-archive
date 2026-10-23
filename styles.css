@@ -877,6 +877,7 @@ blockquote cite {
 .outfit-entry {
   border-bottom: 1px solid var(--line-strong);
   padding: 42px 0 48px;
+  scroll-margin-top: 96px;
 }
 
 .outfit-heading {
@@ -973,6 +974,7 @@ blockquote cite {
 .outfit-media img {
   aspect-ratio: 16 / 9;
   display: block;
+  height: auto;
   object-fit: cover;
   transition: filter 180ms ease, transform 220ms ease;
   width: 100%;
@@ -1197,6 +1199,7 @@ blockquote cite {
 .gallery-grid img {
   aspect-ratio: 16 / 9;
   display: block;
+  height: auto;
   object-fit: cover;
   transition: transform 220ms ease;
   width: 100%;
@@ -1930,6 +1933,7 @@ footer a {
   }
 
   .outfit-entry {
+    scroll-margin-top: 128px;
     padding: 34px 0 40px;
   }
 
