@@ -789,6 +789,10 @@ blockquote cite {
   grid-column: 1 / -1;
 }
 
+#messiah-title {
+  scroll-margin-top: 128px;
+}
+
 .relation-list > div {
   align-items: flex-start;
   background: var(--surface);
