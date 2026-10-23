@@ -1,0 +1,78 @@
+{
+  "recorded_date": "2026-10-23",
+  "timezone": "Asia/Shanghai",
+  "scope": "早期衣装称呼、活动时间、投稿日期和制作署名校订；账号统计仍为2026-10-22快照",
+  "primary_announcements": [
+    {
+      "title": "五月三日晚八点栗妮亚nini新衣发布会",
+      "url": "https://www.bilibili.com/opus/924317261781532691",
+      "page_edited_at": "2024-04-25T23:45:00+08:00",
+      "event_at": "2024-05-03T20:00:00+08:00",
+      "event_theme": "神使坠落",
+      "creator_used_name": "荆棘女巫",
+      "correction": "该称呼已用于本人新衣宣传与故事，不再仅标为视频关联标题。"
+    },
+    {
+      "title": "天才小兔的新衣回！",
+      "url": "https://www.bilibili.com/opus/930734879246647333",
+      "published_at": "2024-05-13T03:26:00+08:00",
+      "article_id": "cv34476203",
+      "supports": "本人回顾首次新衣回并以荆棘女巫介绍新衣及故事。"
+    },
+    {
+      "title": "欢迎参加兔的6.30黑芭蕾新衣发布会",
+      "url": "https://www.bilibili.com/opus/1082452468706574371",
+      "page_edited_at": "2025-06-26T00:08:00+08:00",
+      "event_at": "2025-06-30T20:00:00+08:00",
+      "event_theme": "答约伯书",
+      "creator_used_names": ["黑芭蕾", "弥赛亚"],
+      "correction": "6月30日为新衣活动，7月1日为角色故事投稿，分别记录。"
+    },
+    {
+      "title": "1021小兔生日新衣会诚邀您参加！",
+      "url": "https://www.bilibili.com/opus/1123644765602054161",
+      "published_at": "2025-10-14T23:55:00+08:00",
+      "reserved_event_at": "2025-10-21T20:00:00+08:00",
+      "reservation_title": "生日庆会樱花兔兔的初见",
+      "creator_used_name": "樱花兔兔",
+      "correction": "采用本人称呼；2026-05-04《告死鸟》为后续投稿，不能作为首次登场日期。"
+    },
+    {
+      "title": "欢迎参加栗妮亚10.21生日会",
+      "url": "https://www.bilibili.com/opus/989616514327904256",
+      "page_edited_at": "2024-10-26T12:01:00+08:00",
+      "reserved_event_at": "2024-10-21T20:00:00+08:00",
+      "event_theme": "梦境·回溯",
+      "scope_note": "可确认生日新衣活动预约，正文未给白兔称呼，不据此给白兔补定首次登场日期。"
+    }
+  ],
+  "video_date_review": [
+    {"bvid": "BV1mj411q7o7", "published_date": "2023-08-24", "meaning": "早期Live2D模型展示投稿日"},
+    {"bvid": "BV13m411m7js", "published_date": "2024-04-27", "meaning": "新衣预告投稿日"},
+    {"bvid": "BV1PS411c7AU", "published_date": "2024-05-08", "meaning": "新衣回剧情片段投稿日，混用插图与旧模型"},
+    {"bvid": "BV1njBqY3E54", "published_date": "2024-11-22", "meaning": "红黑衣装Live2D模型展示投稿日"},
+    {"bvid": "BV1adQpYsEyQ", "published_date": "2025-03-12", "meaning": "白兔旧生日故事录像上传日，原生日场次待核实"},
+    {"bvid": "BV1ytgUz9EsW", "published_date": "2025-07-01", "meaning": "弥赛亚角色故事投稿日"},
+    {"bvid": "BV1JCZ7BFEkT", "published_date": "2026-02-14", "meaning": "本节收录的3D视频投稿日，不推为首次3D实装日"},
+    {"bvid": "BV12dZaB7EJF", "published_date": "2026-02-19", "meaning": "本节收录的MMD视频投稿日"},
+    {"bvid": "BV1yRRaBTEtA", "published_date": "2026-05-04", "meaning": "樱花兔兔《告死鸟》后续出镜投稿日"},
+    {"bvid": "BV1JzKk6MEVM", "published_date": "2026-07-20", "meaning": "白兔《融化的第五个夏天》翻唱投稿日"}
+  ],
+  "visual_comparison": {
+    "red_black_outfit": [
+      {"url": "https://www.bilibili.com/video/BV13m411m7js/?t=13", "supports": "预告中已见玫瑰蕾丝帽、眼镜、双侧发髻与粉紫心形瞳"},
+      {"url": "https://www.bilibili.com/video/BV1njBqY3E54/?t=40", "supports": "对应Live2D细节；11月为展示投稿日"},
+      {"url": "https://www.bilibili.com/video/BV1JCZ7BFEkT/?t=10", "supports": "相关红黑玫瑰造型的3D呈现"}
+    ],
+    "white_rabbit_note": "旧生日故事以Q版/兔玩偶画面叙事，不能用其上传日推断白色Live2D衣装的发布日期。"
+  },
+  "credit_review": {
+    "early_live2d": "与模型展示简介一致：画师大大大大大柚子_，建模canaette，视频金色工贼。",
+    "red_black_live2d": "与展示简介一致：原画大大大大大柚子，建模canaette，UI阿咩ko，视频餅餅Mochi。",
+    "red_black_3d": "两支投稿的模型、转换及物理绑定署名核对一致；动作、镜头、舞台和道具继续按具体视频列出。",
+    "messiah": "模型立绘雾原栖；建模保留投稿原文某某，不猜测真实作者。PV主图、壁纸、动效与模型分工分开。",
+    "white_rabbit": "翻唱原曲的美术及PV署名不能归为白兔模型设计。",
+    "sakura": "本次核对的《告死鸟》简介为空，不由此推断全网未公开设计或模型制作署名。"
+  },
+  "method": "公告与文章直接核对本人网页可见正文、署名及日期；视频元数据读取B站官方view接口，造型关联比对官方公开视频画面。"
+}
