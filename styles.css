@@ -1036,12 +1036,14 @@ blockquote cite {
 }
 
 .outfit-display-grid .outfit-model-sheet a,
-.outfit-display-grid .outfit-landscape a {
+.outfit-display-grid .outfit-landscape a,
+.outfit-display-grid .outfit-vertical a {
   aspect-ratio: auto;
 }
 
 .outfit-display-grid .outfit-model-sheet img,
-.outfit-display-grid .outfit-landscape img {
+.outfit-display-grid .outfit-landscape img,
+.outfit-display-grid .outfit-vertical img {
   height: auto;
 }
 
