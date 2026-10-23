@@ -1013,6 +1013,53 @@ blockquote cite {
   flex: 0 0 auto;
 }
 
+.outfit-display-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.outfit-display-grid .outfit-media a {
+  aspect-ratio: 3 / 4;
+}
+
+.outfit-display-grid .outfit-media img {
+  aspect-ratio: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--outfit-focus, 50% 50%);
+}
+
+.outfit-display-grid .outfit-model-sheet,
+.outfit-display-grid .outfit-landscape {
+  grid-column: 1 / -1;
+}
+
+.outfit-display-grid .outfit-model-sheet a,
+.outfit-display-grid .outfit-landscape a {
+  aspect-ratio: auto;
+}
+
+.outfit-display-grid .outfit-model-sheet img,
+.outfit-display-grid .outfit-landscape img {
+  height: auto;
+}
+
+#outfit-white-rabbit .outfit-portrait,
+.gallery-white-rabbit {
+  --outfit-focus: 54% 50%;
+}
+
+#outfit-white-rabbit .outfit-detail {
+  --outfit-focus: 57% 50%;
+}
+
+@media (max-width: 760px) {
+  .outfit-display-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .outfit-copy-wide {
   margin-top: 28px;
 }
@@ -1207,6 +1254,16 @@ blockquote cite {
 
 .gallery-grid a:hover img {
   transform: scale(1.02);
+}
+
+.gallery-grid .outfit-gallery-frame a {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-grid .outfit-gallery-frame img {
+  aspect-ratio: auto;
+  height: 100%;
+  object-position: var(--outfit-focus, 50% 50%);
 }
 
 .gallery-grid figcaption {

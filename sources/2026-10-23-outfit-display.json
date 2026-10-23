@@ -1,0 +1,18 @@
+{
+  "recorded_date": "2026-10-23",
+  "purpose": "衣装图录高清配图与避开弹幕的展示取景",
+  "method": "从原视频提取实帧，保持实际分辨率并转存WebP。按用户最终偏好，以衣装完整、清晰及排版自然为先；白兔与近景用HTML/CSS聚焦人物避开聊天，三周年全景保留原画面及现场聊天区域。模型展示和樱花封面保留原比例。保留原背景，不进行AI重绘、细节补画或像素放大。整帧文件保留在资源目录。",
+  "statistics_snapshot_date": "2026-10-22",
+  "images": [
+    {"file":"assets/outfits/anniversary-2026-fullbody-hd.webp","source":"https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=2461","width":1920,"height":1080,"subject":"小师妹全身"},
+    {"file":"assets/outfits/anniversary-2026-black-hair-hd.webp","source":"https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=3000","width":1920,"height":1080,"subject":"小师妹黑发近景"},
+    {"file":"assets/outfits/anniversary-2026-white-hair-hd.webp","source":"https://www.bilibili.com/video/BV1jaYq6QE1L/?p=1&t=2890","width":1920,"height":1080,"subject":"小师妹白发近景"},
+    {"file":"assets/outfits/white-rabbit-2024-fullbody-hd.webp","source":"https://www.bilibili.com/video/BV1Xsy7YREgi/?p=1&t=1490","width":1920,"height":1080,"subject":"白兔白芭蕾全身"},
+    {"file":"assets/outfits/white-rabbit-2024-closeup-hd.webp","source":"https://www.bilibili.com/video/BV1Xsy7YREgi/?p=1&t=1565","width":1920,"height":1080,"subject":"白兔白芭蕾近景"},
+    {"file":"assets/outfits/original-model-hd.webp","source":"https://www.bilibili.com/video/BV1mj411q7o7/?t=60","width":1280,"height":720,"subject":"初期模型全身与半身"},
+    {"file":"assets/outfits/thorn-model-hd.webp","source":"https://www.bilibili.com/video/BV1njBqY3E54/?t=60","width":1280,"height":720,"subject":"荆棘女巫Live2D无伞全身与半身"},
+    {"file":"assets/outfits/thorn-witch-3d-hd.webp","source":"https://www.bilibili.com/video/BV12dZaB7EJF/?t=3","width":1280,"height":544,"subject":"荆棘女巫3D全身","note":"原生宽银幕画面，公开720P档提取；未拉伸或补边，无损WebP。"}
+  ],
+  "retained_sources": ["2026-10-23-outfit.json", "2026-10-23-outfit-audit.json", "2026-10-23-white-rabbit.json"],
+  "display_scope": "图录移除重复配图、纯文字预告、无关剧情图与取证长文，历史来源及原始资源保留。"
+}
