@@ -118,16 +118,12 @@ svg {
   text-decoration: none;
 }
 
-.brand-seal {
-  align-items: center;
-  background: var(--cherry);
-  color: #fff;
-  display: inline-flex;
+.brand-avatar {
+  border-radius: 6px;
+  display: block;
   flex: 0 0 auto;
-  font-family: SimSun, serif;
-  font-size: 20px;
   height: 38px;
-  justify-content: center;
+  object-fit: cover;
   width: 38px;
 }
 
@@ -785,7 +781,8 @@ blockquote cite {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.character-list > .character-primary {
+.character-list > .character-primary,
+.character-list > .character-latest {
   grid-column: 1 / -1;
 }
 
@@ -803,16 +800,48 @@ blockquote cite {
   padding: 18px;
 }
 
-.relation-list > div > span {
-  align-items: center;
+.character-portrait {
   background: var(--cherry-soft);
-  color: var(--cherry);
-  display: flex;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  display: block;
   flex: 0 0 auto;
-  font-family: STSong, SimSun, serif;
-  height: 46px;
-  justify-content: center;
-  width: 46px;
+  height: 56px;
+  overflow: hidden;
+  width: 56px;
+}
+
+.character-portrait img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--portrait-focus, 50% 50%);
+  transform: scale(var(--portrait-zoom, 1));
+  width: 100%;
+}
+
+.portrait-junior {
+  --portrait-focus: 52% 50%;
+  --portrait-zoom: 1.4;
+}
+
+.portrait-messiah {
+  --portrait-focus: 50% 46%;
+}
+
+.portrait-white {
+  --portrait-focus: 4% 50%;
+  --portrait-zoom: 1.3;
+}
+
+.portrait-sakura {
+  --portrait-focus: 18% 50%;
+  --portrait-zoom: 1.6;
+}
+
+.portrait-thorn {
+  --portrait-focus: 7% 50%;
+  --portrait-zoom: 1.35;
 }
 
 .relation-list h3 {
@@ -1736,7 +1765,7 @@ footer a {
     display: none;
   }
 
-  .brand-seal {
+  .brand-avatar {
     height: 34px;
     width: 34px;
   }
